@@ -9,6 +9,16 @@ set ruler
 set autoread
 set colorcolumn=80
 
+
+" ==================
+" =====AUTO BRACKETS
+" ==================
+imap { {}<Left>
+imap [ []<Left>
+imap ( ()<Left>
+imap < <><Left>
+
+
 autocmd BufRead,BufNewFIle *.md setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFIle *.txt setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFIle *.md setlocal spell spelllang=pt_pt
@@ -32,6 +42,7 @@ Plug 'preservim/nerdtree' " file explorer
 Plug 'tribela/vim-transparent' " deixar o vim transparente
 Plug 'ryanoasis/vim-devicons' " colocar icons nos filetypes
 Plug 'preservim/vim-markdown' " markdown para o vim
+Plug 'dense-analysis/ale' " sugestoes de codigo
 
 call plug#end()
 
@@ -61,4 +72,3 @@ let g:NERDTreeQuitOnOpen = 1
 " =================
 
 let g:vim_markdown_folding_disabled = 1
-
